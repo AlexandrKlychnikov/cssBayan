@@ -1,0 +1,26 @@
+h1 {
+  margin: 0;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+  background-color: lightgray;
+  user-select: none;
+}
+
+.meme_img {
+  width: 75%;
+  aspect-ratio: 1/1;
+}
