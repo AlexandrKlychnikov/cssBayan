@@ -14,8 +14,8 @@ hr {
 
 .container {
   margin: 1rem auto;
-  padding: 0.75rem;
-  width: 50%;
+  padding: 2rem;
+  width: 40%;
   background-color: lightgray;
   user-select: none;
   border: 0.5rem double grey;
@@ -23,10 +23,10 @@ hr {
 }
 
 .meme_img {
-  width: 60%;
+  width: 50%;
   aspect-ratio: 1/1;
   opacity: 1;
-  transition: 0.75s;
+  transition: 0.5s;
   cursor: inherit;
 }
 
@@ -67,7 +67,6 @@ hr {
 
 .container:hover .add_icon{
     opacity: 1; 
-    transition: 0.5s;
 }
 
 input:checked + label .add_icon{
@@ -103,11 +102,27 @@ input:checked + label .img_wrapper {
 
 .add_icon {
   opacity: 0;
-  width: 3rem;
-  height: 3rem;
+  transition: 0.5s;
   cursor: inherit;
 }
 
 .meme_item {
   cursor: pointer;
+}
+
+.meme_item:active .heading_wrapper  {
+  color: blue;
+  opacity: 0.5;
+}
+
+.meme_item:active .img_wrapper  {
+  opacity: 0.5;
+}
+
+.material-symbols-outlined {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
 }
