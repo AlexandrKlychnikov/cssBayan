@@ -27,14 +27,15 @@ hr {
   aspect-ratio: 1/1;
   opacity: 1;
   transition: 0.75s;
+  cursor: inherit;
 }
 
 .img_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  transition: 0.5s;
+  height: 0;
+  cursor: inherit;
 }
 
 .container input{
@@ -46,9 +47,18 @@ hr {
 }
 
 .container input:not(:checked) + label .img_wrapper img {
-  height: 0;
   opacity: 0;
-  transition: 0.5;
+  transition: 0.5s;
+}
+
+.container input:not(:checked) + label:hover .img_wrapper {
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.container input:not(:checked) + label .img_wrapper {
+  transform: scale(0);
+  transition: all 0.5s;
 }
 
 .container:hover input + label {
@@ -57,7 +67,7 @@ hr {
 
 .container:hover .add_icon{
     opacity: 1; 
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 input:checked + label .add_icon{
@@ -65,14 +75,39 @@ input:checked + label .add_icon{
   transform: rotate(45deg);
 }
 
+input:checked + label .img_wrapper {
+  height: 100%;
+}
+
+.meme_item:hover .add_icon{
+  transition: 0.5s;
+  transform: rotate(45deg);
+}
+
+.meme_item:hover .img_wrapper {
+  height: 100%;
+}
+
+.container input:not(:checked) + label:hover .img_wrapper img {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
 .heading_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: inherit;
 }
 
 .add_icon {
   opacity: 0;
   width: 3rem;
   height: 3rem;
+  cursor: inherit;
+}
+
+.meme_item {
+  cursor: pointer;
 }
