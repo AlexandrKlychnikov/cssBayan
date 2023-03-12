@@ -9,17 +9,17 @@ hr {
   margin-left: auto;
   margin-right: auto;
   border-style: inset;
-  border-width: 1px;
+  border-width: 0.1em;
 }
 
 .container {
-  margin: 10px auto;
-  padding: 10px;
+  margin: 1rem auto;
+  padding: 0.75rem;
   width: 50%;
   background-color: lightgray;
   user-select: none;
-  border: 5px double grey;
-  border-radius: 10px;
+  border: 0.5rem double grey;
+  border-radius: 1rem;
 }
 
 .meme_img {
@@ -55,20 +55,24 @@ hr {
   color: black;
 }
 
-h2 {
-  position: relative;
-  padding-right: 30px;
+.container:hover .add_icon{
+    opacity: 1; 
+    transition: 0.3s;
 }
 
-.container:hover h2:after{
-    content: url('./assets/add.png');
-    position: absolute;
-    right: 0px;
-    top: -8px;
-    transition: 0.5s;
-}
-
-.container:hover input:checked + label h2:after{
+input:checked + label .add_icon{
   transition: 0.5s;
   transform: rotate(45deg);
+}
+
+.heading_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add_icon {
+  opacity: 0;
+  width: 3rem;
+  height: 3rem;
 }
