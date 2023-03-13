@@ -105,7 +105,7 @@ input:checked + label .img_wrapper {
 }
 
 
-@media (min-width: 821px) and (hover: hover) {
+@media (any-hover: hover) {
 
   .container input:not(:checked) + label:hover .img_wrapper {
     transform: scale(1);
@@ -138,15 +138,6 @@ input:checked + label .img_wrapper {
 @media (max-width: 1000px) {
   .meme_img {
     width: 60%;
-  }
-}
-
-@media (max-width: 820px) {
-  * {
-    cursor: none;
-  }
-  .meme_item {
-    cursor: none;
   }
 }
 
